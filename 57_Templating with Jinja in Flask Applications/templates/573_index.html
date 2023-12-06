@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Blog</title>
+</head>
+<body>
+	{% for post in posts %}
+		{% if post["id"] == 2 %}
+			<h1>{{ post["title"] }}</h1>
+			<h2>{{ post["subtitle"] }}</h2>
+		{% endif %}
+	{% endfor %}
+	<br>
+	<h2>
+		<a href="{{ url_for('all_blogs', number=0) }}">Show all the blogs</a>
+	</h2>
+</body>
+</html>
